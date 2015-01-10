@@ -16,26 +16,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="OpeH1" translatesAutoresizingMaskIntoConstraints="NO" id="C7G-9c-15R">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OpeH1" translatesAutoresizingMaskIntoConstraints="NO" id="C7G-9c-15R">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="input" textAlignment="center" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="udV-9l-xaB">
-                                <rect key="frame" x="239" y="73" width="123" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="input" textAlignment="center" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="udV-9l-xaB">
+                                <rect key="frame" x="239" y="59" width="123" height="30"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="123" id="oFu-ph-h4v"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" keyboardAppearance="alert"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" keyboardAppearance="alert"/>
                             </textField>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MMQ-dF-RBJ">
-                                <rect key="frame" x="140" y="124" width="320" height="162"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MMQ-dF-RBJ">
+                                <rect key="frame" x="140" y="105" width="320" height="162"/>
                             </pickerView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="output" textAlignment="center" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="rCK-ZX-0Ga">
-                                <rect key="frame" x="239" y="309" width="123" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="output" textAlignment="center" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="rCK-ZX-0Ga">
+                                <rect key="frame" x="239" y="283" width="123" height="30"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" keyboardAppearance="alert"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="udV-9l-xaB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="39" id="0zC-n4-lwM"/>
+                            <constraint firstItem="MMQ-dF-RBJ" firstAttribute="top" secondItem="udV-9l-xaB" secondAttribute="bottom" constant="16" id="3fy-Uv-wih"/>
+                            <constraint firstAttribute="trailing" secondItem="C7G-9c-15R" secondAttribute="trailing" id="8KC-4U-jWB"/>
+                            <constraint firstItem="rCK-ZX-0Ga" firstAttribute="top" secondItem="MMQ-dF-RBJ" secondAttribute="bottom" constant="16" id="Dvi-3o-TcI"/>
+                            <constraint firstItem="MMQ-dF-RBJ" firstAttribute="centerX" secondItem="rCK-ZX-0Ga" secondAttribute="centerX" id="KfW-Mo-JQB"/>
+                            <constraint firstItem="rCK-ZX-0Ga" firstAttribute="trailing" secondItem="udV-9l-xaB" secondAttribute="trailing" id="TW6-4i-1oU"/>
+                            <constraint firstItem="C7G-9c-15R" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cvp-UH-Vxp"/>
+                            <constraint firstItem="udV-9l-xaB" firstAttribute="leading" secondItem="rCK-ZX-0Ga" secondAttribute="leading" id="ehN-yv-S9n"/>
+                            <constraint firstItem="rCK-ZX-0Ga" firstAttribute="centerX" secondItem="C7G-9c-15R" secondAttribute="centerX" id="jVX-zW-MD0"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="C7G-9c-15R" secondAttribute="bottom" id="m5d-h4-dCI"/>
+                            <constraint firstItem="C7G-9c-15R" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="z6g-5U-Zb7"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="input" destination="udV-9l-xaB" id="7te-Ms-DRC"/>
@@ -45,6 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="219" y="313"/>
         </scene>
     </scenes>
     <resources>
