@@ -8,11 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+    @IBOutlet weak var input: UITextField!
+    @IBOutlet weak var output: UITextField!
+    @IBOutlet weak var picker: UIPickerView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        picker.dataSource = self
+        picker.delegate = self
+        
     }
 
     override func didReceiveMemoryWarning() {
